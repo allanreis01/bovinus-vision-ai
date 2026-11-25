@@ -1,0 +1,33 @@
+{
+  "name": "bovinus-vision-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API Express + SQLite + Visão Computacional (Gemini Vision com fallback local) — Bovinu'S Vision AI",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch-path=src src/server.js",
+    "start": "node src/server.js",
+    "seed": "node src/db/reset.js",
+    "lint": "eslint src test",
+    "test": "node --test test/*.test.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^3.6.1",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "jpeg-js": "^0.4.4",
+    "multer": "^2.5.0",
+    "pngjs": "^7.0.0"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "^13.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0"
+  }
+}

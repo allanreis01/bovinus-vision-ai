@@ -1,0 +1,25 @@
+{
+  "name": "bovinus-vision-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bovinu'S Vision AI — Visão Computacional + Telemetria Operacional para o almoço do Bovinu'S Grill & Beer (Unidade Augusta). Hackathon FMU Tech 2026.2 — Grupo O Cubo e Os Mágicos.",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c red,yellow \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "start": "concurrently -k -n API,WEB -c red,yellow \"npm run start -w backend\" \"npm run preview -w frontend\"",
+    "build": "npm run build -w frontend",
+    "lint": "npm run lint -w frontend && npm run lint -w backend",
+    "seed": "npm run seed -w backend",
+    "test": "npm run test -w backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.5"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "license": "MIT"
+}
